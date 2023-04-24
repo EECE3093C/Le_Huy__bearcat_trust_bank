@@ -1,0 +1,1 @@
+from .synthetic_data import generate_synthetic_data
