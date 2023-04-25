@@ -5,9 +5,6 @@ class Bank:
 
     def __init__(self):
         self.accounts = []
-
-    # todo: Add the following method(s):
-    #       create_account
     
     def create_account(
         self,
