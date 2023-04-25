@@ -9,6 +9,7 @@ classDiagram
         +create_account(string account_type, int account_number, string account_holder_name, float balance, float interest_rate, int overdraft_limit) void
         +delete_account(int account_type) void
         +find_account(int account_number) Account
+        +list_accounts() void
     }
     class Account {
         +Account(int account_number, string account_holder_name, float balance) void
