@@ -30,7 +30,7 @@ class Account:
 class SavingsAccount(Account):
     """A class representing a savings account."""
 
-    def __init__(self, account_number, account_holder_name, balance, overdraft_limit):
+    def __init__(self, account_number, account_holder_name, balance, interest_rate = 0.0):
         super().__init__(account_number,account_holder_name,balance)
         self.interest_rate = interest_rate
         
@@ -47,7 +47,7 @@ class SavingsAccount(Account):
 class CheckingAccount(Account):
     """A class representing a checking account."""
 
-    def __init__(self, account_number, account_holder_name, balance, overdraft_limit):
+    def __init__(self, account_number, account_holder_name, balance, overdraft_limit = 0):
         super().__init__(account_number,account_holder_name,balance)
         self.overdraft_limit = overdraft_limit
 
