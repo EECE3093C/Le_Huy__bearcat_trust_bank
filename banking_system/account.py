@@ -15,6 +15,13 @@ class Account:
     def deposit(self, amount):
         """Add the amount to the current balance of the account."""
         self.balance += amount
+        
+    def withdraw(self, amount):
+        """Withdraw amount of money if it doesn't exceed the balance."""
+        if amount <= self.balance:
+            self.balance -= amount
+        else:
+            print("Your account does not have sufficient funds.")
      
     def get_balance(self):
         """Return the current balance of the account."""
