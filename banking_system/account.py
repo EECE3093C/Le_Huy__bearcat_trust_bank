@@ -5,6 +5,12 @@ class Account:
     #       __init__
     #       deposit
     #       withdraw
+    
+    def __init__(self, account_number, account_holder_name, balance):
+        #account details
+        self.account_number = account_number
+        self.account_holder_name = account_holder_name
+        self.balance = balance
      
     def get_balance(self):
         """Return the current balance of the account."""
