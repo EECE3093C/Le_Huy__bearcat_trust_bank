@@ -15,8 +15,8 @@ class Bank:
         account_number,
         account_holder_name,
         balance,
-        interest_rate,
-        overdraft_limit,
+        interest_rate = 0.0,
+        overdraft_limit = 0,
     ):
         """Generate a new account, check to see if it's a saving account or a checking account.
         Attributes:
