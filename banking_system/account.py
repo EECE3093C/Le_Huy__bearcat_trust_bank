@@ -1,10 +1,5 @@
 class Account:
     """A class representing a bank account."""
-
-    # todo: Add the following methods:
-    #       __init__
-    #       deposit
-    #       withdraw
     
     def __init__(self, account_number, account_holder_name, balance):
         #account details
@@ -35,9 +30,10 @@ class Account:
 class SavingsAccount(Account):
     """A class representing a savings account."""
 
-    # todo: Add the following method(s):
-    #       __init__
-
+    def __init__(self, account_number, account_holder_name, balance, overdraft_limit):
+        super().__init__(account_number,account_holder_name,balance)
+        self.interest_rate = interest_rate
+        
     def calculate_interest(self):
         """Calculate and return the interest on the account balance."""
         return self.balance * (self.interest_rate / 100)
