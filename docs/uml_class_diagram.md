@@ -1,34 +1,44 @@
 # UML Class Diagram
 
-### This is a UML class diagram to display the relationship between `Bank`, `Account`, `SavingsAccount`, and `CheckingAccount`.
+### The following diagram demonstrates the relationship between `Bank`, `Account`, `SavingsAccount`, and `CheckingAccount` .
 
 ```mermaid
 classDiagram
-    class Bank {
-        +Bank() void
-        +create_account(string account_type, int account_number, string account_holder_name, float balance, float interest_rate, int overdraft_limit) void
-        +delete_account(int account_type) void
-        +find_account(int account_number) Account
-        +list_accounts() void
-    }
+   
     class Account {
-        +Account(int account_number, string account_holder_name, float balance) void
-        +deposit(float amount) void
-        +withdraw(float amount) void
-        +get_balance() float
-        +display() void
+        +Int account_number
+        +String account_holder_name
+        +Float balance
+        +Float deposit(amount)
+        +Float withdraw(amount)
+        +Float get_balance()
+        +Void display()
     }
+     class Bank {
+         +String account_type
+         +Int account_number 
+         +String account_holder_name 
+         +Float balance
+         +Float interest_rate 
+         +Int overdraft_limit
+         +Void create_account()
+         +Void delete_account(account_number)
+         +Void find_account(account_number)
+         +Void list_accounts() 
+     }   
+     
     class SavingsAccount  {
-        +SavingsAccount(int account_number, string account_holder_name, float balance, float interest_rate) void
-        +calculate_interest() float
-        +display() void
+        +Float interest_rate
+        +Float calculate_interest()
+        +Void display()
     }
     class CheckingAccount {
-        +CheckingAccount(int account_number, string account_holder_name, float balance, int overdraft_limit) void
-        +withdraw(float amount) void
-        +display() void
+        +Int overdraft_limit
+        +Float withdraw(amount)
+        +Void display()
     }
+    
     Account <|-- SavingsAccount
     Account <|-- CheckingAccount
-    Bank *-- "*" Account
+    Bank *-- "*" Account   
 ```
