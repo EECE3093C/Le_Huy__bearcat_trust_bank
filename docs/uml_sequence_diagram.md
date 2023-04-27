@@ -42,7 +42,7 @@ sequenceDiagram
     User ->> Bank: withdraw (amount)
     Bank ->> Account: withdraw (amount)
     Account ->> CheckingAccount: withdraw(amount)
-    CheckingAccount ->> Bank: withdraw(amount)
+    CheckingAccount -->> Bank: withdraw(amount)
 
 
 ```
