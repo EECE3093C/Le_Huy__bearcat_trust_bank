@@ -21,7 +21,7 @@ classDiagram
          +Float balance
          +Float interest_rate 
          +Int overdraft_limit
-         +Void create_account()
+         +Account create_account(String account_type, Int account_number, String account_holder_name, Float balance, Float interest_rate = 0.0, Int overdraft_limit = 0)
          +Void delete_account(account_number)
          +Void find_account(account_number)
          +Void list_accounts() 
